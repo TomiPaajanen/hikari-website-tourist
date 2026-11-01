@@ -1,5 +1,6 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
-import { ButtonLink, Placeholder, sectionClass } from "@/components/ui";
+import { ButtonLink, sectionClass } from "@/components/ui";
 
 const benefits: ReactNode[] = [
   <>
@@ -36,7 +37,15 @@ export function PlanTrip() {
         </h2>
 
         <div className="flex flex-wrap items-center gap-[38px]">
-          <Placeholder label="Photo of the two of us" className="h-[250px] min-w-0 flex-[1_1_300px] rounded-[3px]" />
+          <div className="relative h-[250px] min-w-0 flex-[1_1_300px] overflow-hidden rounded-[3px]">
+            <Image
+              src="/images/need help planning your trip.png"
+              alt="Smiling in a yukata outside a traditional Kyoto restaurant"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="object-cover object-[50%_30%]"
+            />
+          </div>
 
           <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-5 text-left">
             <p className="text-sm leading-[1.75]">

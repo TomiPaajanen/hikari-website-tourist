@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/components/language";
 import { ButtonLink } from "@/components/ui";
 
@@ -9,11 +10,19 @@ export function Hero() {
   return (
     <section
       lang={lang}
-      className="relative flex min-h-[600px] flex-col items-center justify-center gap-6 overflow-hidden bg-hero px-4 py-16 text-white md:px-12 md:py-[88px]"
+      className="relative isolate flex min-h-[600px] flex-col items-center justify-center gap-6 overflow-hidden bg-hero px-4 py-16 text-white md:px-12 md:py-[88px]"
     >
-      <p className="absolute top-[18px] left-5 hidden text-[10px] tracking-[0.08em] uppercase md:block">
-        [ Background photo — natural light, a person or their hands ]
-      </p>
+      <Image
+        src="/images/top-2.jpg"
+        alt="A canal boat passing cherry blossoms in Kyoto"
+        fill
+        sizes="(max-width: 1280px) 100vw, 1280px"
+        loading="eager"
+        fetchPriority="high"
+        className="-z-10 object-cover"
+      />
+      {/* Darkens the photo so the white text stays readable. */}
+      <div aria-hidden className="absolute inset-0 -z-10 bg-hero/55" />
       <h1 className="max-w-[17em] font-serif text-[30px] leading-[1.2] font-semibold md:text-[38px]">
         {t.heroTitle}
       </h1>

@@ -1,12 +1,14 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { getInterest, interests, type Interest, type InterestId } from "@/lib/interests";
-import { ButtonLink, Eyebrow, Placeholder, SectionHeading, sectionClass } from "@/components/ui";
+import { ButtonLink, Eyebrow, SectionHeading, sectionClass } from "@/components/ui";
 
 // Bubble centres sit on a circle whose radius is this percentage of the diagram width.
 const RING_RADIUS = 34.29;
 
 type ItineraryExample = {
   title: string;
+  image: { src: string; alt: string };
   interest: InterestId;
   days: string;
   plan: string[];
@@ -15,6 +17,7 @@ type ItineraryExample = {
 const itineraryExamples: ItineraryExample[] = [
   {
     title: "[ JOURNEY TITLE ]",
+    image: { src: "/images/top-1.png", alt: "Sunset over Kyoto, seen from the surrounding hills" },
     interest: "traditions",
     days: "[ N ]",
     plan: [
@@ -25,6 +28,7 @@ const itineraryExamples: ItineraryExample[] = [
   },
   {
     title: "[ JOURNEY TITLE ]",
+    image: { src: "/images/top-3.jpg", alt: "A traditional wooden house in a leafy Japanese garden" },
     interest: "contemporary",
     days: "[ N ]",
     plan: [
@@ -86,7 +90,15 @@ function ItineraryCard({ example }: { example: ItineraryExample }) {
 
   return (
     <article className="max-w-[520px] min-w-0 flex-[1_1_400px] overflow-hidden rounded-[3px] border border-sand">
-      <Placeholder label="Photo" className="h-[190px]" />
+      <div className="relative h-[190px]">
+        <Image
+          src={example.image.src}
+          alt={example.image.alt}
+          fill
+          sizes="(max-width: 560px) 100vw, 520px"
+          className="object-cover"
+        />
+      </div>
       <div className="flex flex-col items-center gap-3.5 p-[26px]">
         <h3 className="font-serif text-[26px] font-semibold">{example.title}</h3>
         <div className="flex flex-wrap items-center justify-center gap-2 text-[11px]">

@@ -33,16 +33,6 @@ export function ButtonLink({ className = "", ...props }: ComponentProps<"a">) {
   );
 }
 
-export function Placeholder({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div
-      className={`flex items-center justify-center bg-sand p-3.5 text-center text-[11px] tracking-[0.06em] uppercase ${className}`}
-    >
-      [ {label} ]
-    </div>
-  );
-}
-
 export function TextField({ label, className = "", ...inputProps }: { label: string } & ComponentProps<"input">) {
   return (
     <label className={`flex flex-col gap-1.5 text-xs ${className}`}>

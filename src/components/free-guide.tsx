@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { interests } from "@/lib/interests";
-import { Placeholder, PrivacyConsent, SectionHeading, TextField, sectionClass, submitClass } from "@/components/ui";
+import { PrivacyConsent, SectionHeading, TextField, sectionClass, submitClass } from "@/components/ui";
 
 export function FreeGuide() {
   return (
@@ -11,7 +12,13 @@ export function FreeGuide() {
       </p>
 
       <form className="mx-auto flex max-w-[640px] flex-col items-center gap-[18px] rounded-[3px] bg-paper px-5 py-8 md:p-[38px]">
-        <Placeholder label="Cover" className="h-[220px] w-[170px] rounded-[3px]" />
+        <Image
+          src="/images/toiro_cover.png"
+          alt="Cover of the TOIRO Journeys Kyoto field guide, showing the Nanzen-ji aqueduct"
+          width={170}
+          height={241}
+          className="rounded-[3px] shadow-md ring-1 ring-sand"
+        />
         <p className="text-[11px] font-semibold tracking-[0.1em] text-accent uppercase">Free</p>
         <h3 className="font-serif text-[30px] font-semibold">Kyoto, without the crowds</h3>
         <p className="max-w-[32em] text-[13px] leading-[1.85]">
