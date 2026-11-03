@@ -1,9 +1,10 @@
-const legalLinks = [
-  "Terms of use",
-  "Cancellation policy",
-  "Commercial transactions notice",
-  "Privacy policy",
-  "Instagram",
+const footerLinks: { label: string; href?: string }[] = [
+  // Pages for these don't exist yet.
+  { label: "Terms of use" },
+  { label: "Cancellation policy" },
+  { label: "Commercial transactions notice" },
+  { label: "Privacy policy" },
+  { label: "Instagram", href: "https://www.instagram.com/toiro.journeys/" },
 ];
 
 export function SiteFooter() {
@@ -16,11 +17,16 @@ export function SiteFooter() {
       <a href="mailto:info@toirojourneys.com" className="text-xs text-paper no-underline hover:text-white">
         info@toirojourneys.com
       </a>
-      {/* Pages for these don't exist yet. */}
       <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs">
-        {legalLinks.map((label) => (
+        {footerLinks.map(({ label, href }) => (
           <li key={label} className="underline">
-            {label}
+            {href ? (
+              <a href={href} target="_blank" rel="noopener noreferrer" className="text-paper hover:text-white">
+                {label}
+              </a>
+            ) : (
+              label
+            )}
           </li>
         ))}
       </ul>
