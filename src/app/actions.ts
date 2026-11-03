@@ -45,10 +45,9 @@ export async function signUpForGuide(_previous: GuideSignupState, formData: Form
     }).filter(([, value]) => value),
   );
 
-  const groups = formData.get("springWaitlist") === "on" ? [GUIDE_GROUP, WAITLIST_GROUP] : [GUIDE_GROUP];
-
+  // The form tells everyone they'll hear about spring 2027, so every sign-up joins both groups.
   try {
-    await subscribe({ email, fields, groups });
+    await subscribe({ email, fields, groups: [GUIDE_GROUP, WAITLIST_GROUP] });
   } catch (error) {
     console.error("Guide signup failed:", error);
     return {

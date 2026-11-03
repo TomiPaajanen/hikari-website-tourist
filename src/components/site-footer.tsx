@@ -13,7 +13,7 @@ export function SiteFooter() {
       id="footer"
       className="flex flex-col items-center gap-4 bg-ink px-4 pt-14 pb-[52px] text-paper md:px-14"
     >
-      <div className="font-serif text-[22px] font-bold tracking-[0.1em]">TOIRO JOURNEYS</div>
+      <div className="font-serif text-[22px] font-bold tracking-[0.1em]">Toiro Journeys</div>
       <a href="mailto:info@toirojourneys.com" className="text-xs text-paper no-underline hover:text-white">
         info@toirojourneys.com
       </a>

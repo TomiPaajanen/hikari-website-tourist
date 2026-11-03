@@ -13,7 +13,7 @@ export function Hero() {
       className="relative isolate flex min-h-[600px] flex-col items-center justify-center gap-6 overflow-hidden bg-hero px-4 py-16 text-white md:px-12 md:py-[88px]"
     >
       <Image
-        src="/images/top-2.jpg"
+        src="/images/top_image.jpg"
         alt="A canal boat passing cherry blossoms in Kyoto"
         fill
         sizes="(max-width: 1280px) 100vw, 1280px"

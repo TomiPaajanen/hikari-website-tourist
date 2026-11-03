@@ -15,7 +15,24 @@ const services = [
   "Guides for your groups",
 ];
 
-const steps = ["You get in touch", "[ Step ]", "[ Step ]", "We arrange it"];
+const steps = [
+  {
+    title: "Get in touch",
+    description: "Tell us about your travelers and what you are looking for. We reply within 3–5 business days.",
+  },
+  {
+    title: "Discovery call",
+    description: "We listen. Who your guests are, what you already offer, and where it could go further.",
+  },
+  {
+    title: "Proposal",
+    description: "We send ideas for you to review: itineraries, local experiences, or guide support.",
+  },
+  {
+    title: "Start working together",
+    description: "Once we agree on the scope, we begin planning and operations.",
+  },
+];
 
 const topics = [
   { value: "proposals", label: "Tour proposals" },
@@ -42,11 +59,12 @@ export function ForAgents() {
       </ul>
 
       <Eyebrow className="mb-4">How we work together</Eyebrow>
-      <ol className="mb-11 flex flex-wrap items-center justify-center gap-2.5 text-xs">
+      <ol className="mx-auto mb-11 grid max-w-[1000px] grid-cols-1 gap-4 text-left sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
-          <li key={index} className="flex items-center gap-2.5">
-            {index > 0 && <span aria-hidden>→</span>}
-            <span className="rounded-[3px] border border-sand px-[15px] py-2.5">{step}</span>
+          <li key={step.title} className="flex flex-col gap-2 rounded-[3px] border border-sand px-[18px] py-6">
+            <span className="font-serif text-[22px] leading-none font-semibold text-accent">{index + 1}</span>
+            <h4 className="text-[13px] font-semibold">{step.title}</h4>
+            <p className="text-xs leading-[1.7]">{step.description}</p>
           </li>
         ))}
       </ol>

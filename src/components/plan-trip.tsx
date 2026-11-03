@@ -1,15 +1,10 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
 import { ButtonLink, sectionClass } from "@/components/ui";
 
-const benefits: ReactNode[] = [
-  <>
-    A <b>custom itinerary</b>, built around what you are curious about
-  </>,
-  <>
-    <b>Introductions</b> to artisans, family-run businesses, and the people who keep a place going
-  </>,
-  "[ Proof — travellers hosted, or a line from a guest, once you have one ]",
+const benefits = [
+  "A chance for us to hear what you are looking for",
+  "An introduction to our tours and how we work",
+  "30 countries, all 47 prefectures, and experience guiding visitors from overseas",
 ];
 
 function CheckIcon() {
@@ -49,7 +44,7 @@ export function PlanTrip() {
 
           <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-5 text-left">
             <p className="text-sm leading-[1.75]">
-              Hi, we are Hikari and Mitsuki. We only introduce places we want to go ourselves.
+              Tell us a little about your trip and what you are curious about.
             </p>
             <ul className="flex flex-col gap-3.5">
               {benefits.map((benefit, index) => (

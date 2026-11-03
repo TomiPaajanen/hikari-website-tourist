@@ -12,7 +12,7 @@ export const interests: Interest[] = [
   { id: "traditions", name: "Living Traditions", summary: "Crafts, artisans, tea, textiles", color: "#336A94" },
   { id: "spiritual", name: "Spiritual Japan", summary: "Shrines, temples, inner life", color: "#7C6BC0" },
   { id: "food", name: "Food and Local Life", summary: "Markets, kitchens, daily rhythm", color: "#C25E46" },
-  { id: "nature", name: "Nature and Rural Rhythms", summary: "Satoyama, farms, hot springs", color: "#5A6349" },
+  { id: "nature", name: "Nature and Rural Rhythms", summary: "Outdoor activities, satoyama, farms", color: "#5A6349" },
   { id: "contemporary", name: "Contemporary Japan", summary: "Art, regeneration, sustainability", color: "#D9B452" },
 ];
 

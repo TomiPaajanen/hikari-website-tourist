@@ -5,25 +5,33 @@ const founders = [
   {
     photo: { src: "/images/profile2.png", alt: "Hikari in a kimono, in a green garden" },
     name: "Hikari",
-    role: "[ Role ]",
-    bio: "[ Three to five lines. Years lived abroad, the regeneration background, who they know in Kyoto and Nara. Facts about people and places, not adjectives. ]",
+    role: "Co-founder",
+    bio: "I grew up in the Hokkaido countryside. Teaching Japanese and culture abroad gave me both an inside and an outside view of Japan, and I found how many wonderful places and people are still out of the spotlight. My job here is to share them in a form that fits today, and to introduce them to people who are curious.",
   },
   {
     photo: { src: "/images/profile1.JPEG", alt: "Mitsuki on a hilltop overlooking the sea" },
     name: "Mitsuki",
-    role: "[ Role ]",
-    bio: "[ Three to five lines. What they bring, who they work with, which part of the journey they look after. Facts, not adjectives. ]",
+    role: "Co-founder",
+    bio: "I’ve been to 30 countries and all 47 prefectures, and I studied how travel can support rural communities. After years of guiding guests from overseas, I wanted to go deeper: private tours and learning programs where you understand Japan’s culture, not just see it.",
   },
 ];
 
 export function AboutUs() {
   return (
     <section id="about" className={sectionClass}>
-      <SectionHeading>The two of us</SectionHeading>
-      <p className="mx-auto mb-11 max-w-[36em] text-sm leading-[1.85]">
-        [ A short Kyoto story — the morning, the person, the moment that made us want to do this. Three or four
-        sentences. ]
-      </p>
+      <SectionHeading>Meet us</SectionHeading>
+      <div className="mx-auto mb-11 flex max-w-[36em] flex-col gap-4 text-sm leading-[1.85]">
+        <p>
+          TOIRO Journeys started with two friends who love to travel and spent their 20s abroad. We met in Kyoto, one
+          of our favourite places on earth, and we wanted to share the places and things we truly love with the people
+          who visit.
+        </p>
+        <p>
+          We see Japan through two views: as native Japanese, and as people who have lived outside it. That is how we
+          find the places and people still out of the spotlight.
+        </p>
+        <p>With us, you don’t just travel. You learn, and you feel it for yourself.</p>
+      </div>
 
       <div className="flex flex-wrap justify-center gap-14">
         {founders.map((founder, index) => (
@@ -46,9 +54,6 @@ export function AboutUs() {
         TOIRO means ten colours. Ten travellers, ten Japans — because the same place tells a different story to
         everyone.
       </blockquote>
-      <p className="mx-auto mt-[22px] max-w-[36em] text-[13px] leading-[1.85]">
-        [ One paragraph on why we started TOIRO Journeys. First person, with our names and faces on it. ]
-      </p>
     </section>
   );
 }
