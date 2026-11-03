@@ -49,7 +49,7 @@ export function PlanTrip() {
 
           <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-5 text-left">
             <p className="text-sm leading-[1.75]">
-              Hi, we are [ NAME ] and [ NAME ]. We only introduce places we want to go ourselves.
+              Hi, we are Hikari and Mitsuki. We only introduce places we want to go ourselves.
             </p>
             <ul className="flex flex-col gap-3.5">
               {benefits.map((benefit, index) => (
