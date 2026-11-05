@@ -26,10 +26,22 @@ const zenOldMincho = Zen_Old_Mincho({
   preload: false,
 });
 
+const description =
+  "Private custom tours in Japan, designed around its traditions, countryside, and the people behind them.";
+
 export const metadata: Metadata = {
+  // Makes the share image URL absolute, which link previews require.
+  metadataBase: new URL("https://www.toirojourneys.com"),
   title: "TOIRO Journeys",
-  description:
-    "Private custom tours in Japan, designed around its traditions, countryside, and the people behind them.",
+  description,
+  openGraph: {
+    title: "TOIRO Journeys",
+    description,
+    url: "/",
+    siteName: "TOIRO Journeys",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

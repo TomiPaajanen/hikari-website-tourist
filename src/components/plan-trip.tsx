@@ -57,7 +57,7 @@ export function PlanTrip() {
           </div>
         </div>
 
-        <ButtonLink href="#" className="mt-9 px-9 py-[17px] text-[15px] font-medium">
+        <ButtonLink href="#guide"className="mt-9 px-9 py-[17px] text-[15px] font-medium">
           Plan your trip with us
         </ButtonLink>
       </div>
