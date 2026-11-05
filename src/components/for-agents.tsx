@@ -1,3 +1,7 @@
+"use client";
+
+import { useActionState } from "react";
+import { sendEnquiry, type EnquiryState } from "@/app/actions";
 import {
   Eyebrow,
   PrivacyConsent,
@@ -34,14 +38,14 @@ const steps = [
   },
 ];
 
-const topics = [
-  { value: "proposals", label: "Tour proposals" },
-  { value: "existing", label: "Existing products" },
-  { value: "operations", label: "Planning and operations" },
-  { value: "guides", label: "Guides" },
-];
+// The labels are sent as-is in the enquiry email.
+const topics = ["Tour proposals", "Existing products", "Planning and operations", "Guides"];
+
+const initialState: EnquiryState = { status: "idle" };
 
 export function ForAgents() {
+  const [state, formAction, pending] = useActionState(sendEnquiry, initialState);
+
   return (
     <section id="agents" className={sectionClass}>
       <SectionHeading>For travel agencies</SectionHeading>
@@ -69,41 +73,66 @@ export function ForAgents() {
         ))}
       </ol>
 
-      <form className="mx-auto flex max-w-[620px] flex-col gap-4 rounded-[3px] border border-sand px-5 py-8 md:p-[38px]">
+      <form
+        action={formAction}
+        className="mx-auto flex max-w-[620px] flex-col gap-4 rounded-[3px] border border-sand px-5 py-8 md:p-[38px]"
+      >
         <h3 className="font-serif text-[26px] font-semibold">Get in touch</h3>
-        <div className="flex flex-wrap gap-[15px]">
-          <TextField
-            label="Company or organisation"
-            name="company"
-            type="text"
-            autoComplete="organization"
-            className="flex-[1_1_200px]"
-          />
-          <TextField label="Your name" name="name" type="text" autoComplete="name" className="flex-[1_1_160px]" />
-        </div>
-        <TextField label="Email address" name="email" type="email" autoComplete="email" required />
-
-        <fieldset>
-          <legend className="mx-auto mb-4 text-xs">What would you like to talk about?</legend>
-          <div className="grid grid-cols-1 gap-x-[18px] gap-y-2.5 text-xs sm:grid-cols-2">
-            {topics.map((topic) => (
-              <label key={topic.value} className="flex min-h-7 items-center justify-center gap-[7px]">
-                <input type="checkbox" name="topics" value={topic.value} />
-                {topic.label}
-              </label>
-            ))}
+        {state.status === "success" ? (
+          <div role="status" className="flex flex-col items-center gap-2 py-4">
+            <p className="font-serif text-2xl font-semibold">Thank you!</p>
+            <p className="max-w-[30em] text-[13px] leading-[1.85]">
+              We have received your message and will reply within 3–5 business days.
+            </p>
           </div>
-        </fieldset>
+        ) : (
+          <>
+            <div className="flex flex-wrap gap-[15px]">
+              <TextField
+                label="Company or organisation"
+                name="company"
+                type="text"
+                autoComplete="organization"
+                className="flex-[1_1_200px]"
+              />
+              <TextField label="Your name" name="name" type="text" autoComplete="name" className="flex-[1_1_160px]" />
+            </div>
+            <TextField label="Email address" name="email" type="email" autoComplete="email" required />
 
-        <label className="flex flex-col gap-1.5 text-xs">
-          Message
-          <textarea name="message" rows={3} className={fieldClass} />
-        </label>
-        <PrivacyConsent />
-        <button type="button" className={`${submitClass} text-[15px]`}>
-          Send
-        </button>
-        <p className="text-[11px] leading-[1.7]">Travelling on your own and have a question? Write to us here too.</p>
+            <fieldset>
+              <legend className="mx-auto mb-4 text-xs">What would you like to talk about?</legend>
+              <div className="grid grid-cols-1 gap-x-[18px] gap-y-2.5 text-xs sm:grid-cols-2">
+                {topics.map((topic) => (
+                  <label key={topic} className="flex min-h-7 items-center justify-center gap-[7px]">
+                    <input type="checkbox" name="topics" value={topic} />
+                    {topic}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            <label className="flex flex-col gap-1.5 text-xs">
+              Message
+              <textarea name="message" rows={3} className={fieldClass} />
+            </label>
+            {/* Hidden from people, but filled in by spam bots. */}
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
+            <PrivacyConsent />
+            <button
+              type="submit"
+              disabled={pending}
+              className={`${submitClass} text-[15px] disabled:cursor-wait disabled:opacity-60`}
+            >
+              {pending ? "Sending…" : "Send"}
+            </button>
+            {state.status === "error" && (
+              <p role="alert" className="text-xs leading-[1.6] text-[#C25E46]">
+                {state.message}
+              </p>
+            )}
+            <p className="text-[11px] leading-[1.7]">Travelling on your own and have a question? Write to us here too.</p>
+          </>
+        )}
       </form>
     </section>
   );

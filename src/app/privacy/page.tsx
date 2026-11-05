@@ -76,7 +76,8 @@ export default function PrivacyPage() {
           items={[
             <>
               <b>Service Providers:</b> Our email newsletter provider (MailerLite) to store our mailing list and send
-              our guide and emails; our website host (Vercel); our email provider (Google Workspace); and secure payment
+              our guide and emails; our website host (Vercel); our email provider (Google Workspace); the service that delivers contact form
+              messages to our inbox (Resend); and secure payment
               processors (e.g., Stripe) to complete payment transactions.
             </>,
             <>
@@ -105,7 +106,7 @@ export default function PrivacyPage() {
             <>
               <b>Cross-Border Transfers:</b> We are based in Japan and handle your personal data under the Act on the
               Protection of Personal Information (APPI). Some of our service providers store or process data outside
-              Japan, including in the European Union and the United States (MailerLite, Vercel, and Google). These
+              Japan, including in the European Union and the United States (MailerLite, Vercel, Resend, and Google). These
               providers protect personal data under their own privacy and security commitments and the data
               protection laws of those regions.
             </>,
