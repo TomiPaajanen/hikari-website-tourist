@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             "To send you our free guide and, if you sign up, emails about our tours, including our spring 2027 announcements.",
             "To communicate with you regarding tour inquiries, custom itinerary designs, and booking confirmations.",
             "To deliver on-site private guiding services in Japan tailored to your group's needs.",
-            "To process payments, deposits, and refunds securely.",
+            "To process payments, planning fees, and refunds securely.",
             "To make optional third-party reservations (such as local restaurant bookings, activity tickets, or tea ceremonies) on your behalf at your request.",
             "To improve website functionality, customer service, and user experience.",
           ]}
@@ -81,8 +81,14 @@ export default function PrivacyPage() {
               processors (e.g., Stripe) to complete payment transactions.
             </>,
             <>
-              <b>Partner Guides:</b> Our co-founder and partner Hikari works with us as an independent guide and
-              receives the information needed to plan and deliver your tour.
+              <b>Operating Partner:</b> Our co-founder and operating partner, Hikari, is involved in all aspects of
+              running TOIRO Journeys, including administration. She has access to the information you give us for
+              these purposes.
+            </>,
+            <>
+              <b>Guides and Other Contractors:</b> We work with independent guides and other contractors who help
+              deliver tours or support our operations. They receive only the information they need for their task,
+              must keep it confidential, and may not use it for their own purposes.
             </>,
             <>
               <b>Local Suppliers:</b> Relevant details (e.g., guest names or dietary requirements) shared with local

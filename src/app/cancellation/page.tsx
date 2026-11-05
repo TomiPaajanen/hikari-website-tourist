@@ -21,8 +21,9 @@ export default function CancellationPage() {
         terms apply to all tour cancellations, changes, and refunds.
       </p>
       <p>
-        All cancellation and change requests must be submitted in writing by email to {contactEmail}. Cut-off dates
-        and timing are calculated strictly based on Japan Standard Time (JST).
+        All cancellation and change requests must be submitted in writing by email to {contactEmail}. Days are
+        counted by calendar date in Japan Standard Time (JST). A cancellation email received by 3:00 PM JST counts as
+        received that day. An email received after 3:00 PM JST counts as received the next calendar day.
       </p>
 
       <LegalSection title="1. Cancellation by the Guest">
@@ -46,24 +47,15 @@ export default function CancellationPage() {
             ))}
           </tbody>
         </table>
-        <LegalList
-          items={[
-            <>
-              <b>Booking confirmation:</b> Your booking is confirmed on the day we receive your 20% planning fee.
-              Before that day, no booking exists and no cancellation fee applies.
-            </>,
-            <>
-              <b>Counting days:</b> Days are counted by calendar date in Japan Standard Time (JST). A cancellation
-              email received by 3:00 PM JST counts as received that day. An email received after 3:00 PM JST counts as
-              received the next calendar day.
-            </>,
-          ]}
-        />
+        <p>
+          <b>Booking confirmation:</b> Your booking is confirmed on the day we receive your 20% planning fee. Before
+          that day, no booking exists and no cancellation fee applies.
+        </p>
 
         <h3 className="mt-2 font-semibold">Planning Fee Policy</h3>
         <LegalList
           items={[
-            "The 20% deposit paid at booking is a dedicated planning fee covering the design of your custom itinerary. It is non-refundable in any case of customer cancellation.",
+            "The 20% planning fee paid at booking covers the design of your custom itinerary. It is non-refundable in any case of customer cancellation.",
             "The planning fee counts directly toward the total cancellation fee shown above—it is not charged on top of it.",
             "If you have paid more than the applicable cancellation fee at the time of cancellation, we will refund the difference.",
             "If the fee is higher than the amount you have paid so far, the remaining difference will be charged to the credit card used at booking.",
