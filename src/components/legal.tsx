@@ -11,11 +11,11 @@ export const contactEmail = (
 
 export function LegalPage({
   title,
-  details,
+  details = [],
   children,
 }: {
   title: string;
-  details: { label: string; value: ReactNode }[];
+  details?: { label: string; value: ReactNode }[];
   children: ReactNode;
 }) {
   return (
@@ -24,14 +24,16 @@ export function LegalPage({
         <SiteHeader />
         <main className="mx-auto flex max-w-[44em] flex-col gap-4 px-4 py-16 text-sm leading-[1.85] md:py-20">
           <h1 className="font-serif text-[34px] leading-tight font-semibold md:text-[40px]">{title}</h1>
-          <dl className="grid grid-cols-[auto_1fr] gap-x-4 text-[13px]">
-            {details.map(({ label, value }) => (
-              <div key={label} className="contents">
-                <dt className="font-semibold">{label}</dt>
-                <dd>{value}</dd>
-              </div>
-            ))}
-          </dl>
+          {details.length > 0 && (
+            <dl className="grid grid-cols-[auto_1fr] gap-x-4 text-[13px]">
+              {details.map(({ label, value }) => (
+                <div key={label} className="contents">
+                  <dt className="font-semibold">{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
           {children}
         </main>
         <SiteFooter />

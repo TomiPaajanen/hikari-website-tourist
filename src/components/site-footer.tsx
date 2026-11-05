@@ -4,7 +4,7 @@ const footerLinks: { label: string; href?: string }[] = [
   { label: "Terms of use", href: "/terms" },
   // Pages for these don't exist yet.
   { label: "Cancellation policy" },
-  { label: "Commercial transactions notice" },
+  { label: "Commercial transactions notice", href: "/commercial-transactions" },
   { label: "Privacy policy", href: "/privacy" },
   { label: "Instagram", href: "https://www.instagram.com/toiro.journeys/" },
 ];

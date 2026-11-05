@@ -80,6 +80,10 @@ export default function PrivacyPage() {
               processors (e.g., Stripe) to complete payment transactions.
             </>,
             <>
+              <b>Partner Guides:</b> Our co-founder and partner Hikari works with us as an independent guide and
+              receives the information needed to plan and deliver your tour.
+            </>,
+            <>
               <b>Local Suppliers:</b> Relevant details (e.g., guest names or dietary requirements) shared with local
               venues, workshops, or restaurants solely to arrange requested reservations for your tour.
             </>,
