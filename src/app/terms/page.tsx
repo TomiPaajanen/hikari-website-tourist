@@ -97,7 +97,8 @@ export default function TermsPage() {
               <b>No Travel Agency Services:</b> As outlined in our Booking Terms, TOIRO Journeys provides private
               guiding and custom itinerary design. We do not operate as a licensed travel agency or booking agent
               for third-party accommodation, transport, or flight services. Any reservations made with third-party
-              providers based on information on our Site are strictly between you and the respective provider.
+              providers based on information on our Site are strictly between you and the respective provider. Tours
+              sold by our licensed travel agency partners are booked and operated under that agency’s terms.
             </>,
           ]}
         />

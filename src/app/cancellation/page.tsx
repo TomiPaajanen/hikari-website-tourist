@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const cancellationFees = [
-  { notice: "30 or more days before tour start date", fee: "30% (Includes the non-refundable planning fee)" },
+  { notice: "From booking confirmation to 30 days before tour start date", fee: "30% (Includes the non-refundable planning fee)" },
   { notice: "29 to 15 days before tour start date", fee: "50%" },
   { notice: "14 to 8 days before tour start date", fee: "70%" },
   { notice: "7 days or fewer, on start date, or no-show", fee: "100% (No refund)" },
@@ -46,6 +46,19 @@ export default function CancellationPage() {
             ))}
           </tbody>
         </table>
+        <LegalList
+          items={[
+            <>
+              <b>Booking confirmation:</b> Your booking is confirmed on the day we receive your 20% planning fee.
+              Before that day, no booking exists and no cancellation fee applies.
+            </>,
+            <>
+              <b>Counting days:</b> Days are counted by calendar date in Japan Standard Time (JST). A cancellation
+              email received by 3:00 PM JST counts as received that day. An email received after 3:00 PM JST counts as
+              received the next calendar day.
+            </>,
+          ]}
+        />
 
         <h3 className="mt-2 font-semibold">Planning Fee Policy</h3>
         <LegalList
