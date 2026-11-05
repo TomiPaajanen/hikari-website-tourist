@@ -121,7 +121,7 @@ export default function TermsPage() {
         <LegalList
           items={[
             'The Site and its contents are provided on an "as is" and "as available" basis, without warranties of any kind, either express or implied.',
-            "TOIRO Journeys and Mitsuki Nakao shall not be liable for any direct, indirect, incidental, consequential, or special damages resulting from your use of, or inability to use, this Site, including reliance on any information contained herein.",
+            "TOIRO Journeys and Mitsuki Nakao shall not be liable for any direct, indirect, incidental, consequential, or special damages resulting from your use of, or inability to use, this Site, including reliance on any information contained herein, except in cases of our intentional misconduct or gross negligence.",
           ]}
         />
       </LegalSection>

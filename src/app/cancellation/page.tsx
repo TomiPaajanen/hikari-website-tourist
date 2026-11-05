@@ -142,7 +142,7 @@ export default function CancellationPage() {
         </p>
         <LegalList
           items={[
-            "We will issue a refund of total amounts paid, minus unrecoverable costs already paid to third-party providers on your behalf.",
+            "We will issue a refund of total amounts paid, minus unrecoverable costs already paid to third-party providers on your behalf. The refund includes the 20% planning fee.",
             "If a tour is operational and safe to run, but you choose to cancel due to external events or travel disruptions, standard cancellation fees in Section 1 apply.",
           ]}
         />
