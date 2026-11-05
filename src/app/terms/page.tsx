@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LegalList, LegalPage, LegalSection, contactEmail } from "@/components/legal";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | TOIRO Journeys",
+  title: "Terms of Use",
 };
 
 export default function TermsPage() {

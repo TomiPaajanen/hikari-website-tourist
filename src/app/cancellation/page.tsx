@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalList, LegalPage, LegalSection, contactEmail } from "@/components/legal";
 
 export const metadata: Metadata = {
-  title: "Cancellation & Change Policy | TOIRO Journeys",
+  title: "Cancellation & Change Policy",
 };
 
 const cancellationFees = [

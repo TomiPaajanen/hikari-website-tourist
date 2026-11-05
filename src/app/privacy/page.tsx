@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LegalList, LegalPage, LegalSection, contactEmail } from "@/components/legal";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | TOIRO Journeys",
+  title: "Privacy Policy",
 };
 
 export default function PrivacyPage() {

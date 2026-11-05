@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { LegalList, LegalPage, contactEmail } from "@/components/legal";
 
 export const metadata: Metadata = {
-  title: "Specified Commercial Transactions Act Notice | TOIRO Journeys",
+  title: "Specified Commercial Transactions Act Notice",
 };
 
 const items: { label: string; value: ReactNode }[] = [

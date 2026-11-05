@@ -32,10 +32,14 @@ const description =
 export const metadata: Metadata = {
   // Makes the share image URL absolute, which link previews require.
   metadataBase: new URL("https://www.toirojourneys.com"),
-  title: "TOIRO Journeys",
+  title: {
+    default: "TOIRO Journeys | Private Custom Tours in Kyoto & Japan",
+    // Other pages set just their own name, e.g. "Privacy Policy".
+    template: "%s | TOIRO Journeys",
+  },
   description,
   openGraph: {
-    title: "TOIRO Journeys",
+    title: "TOIRO Journeys | Private Custom Tours in Kyoto & Japan",
     description,
     url: "/",
     siteName: "TOIRO Journeys",
