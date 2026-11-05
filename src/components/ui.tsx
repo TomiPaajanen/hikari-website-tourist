@@ -47,7 +47,11 @@ export function PrivacyConsent() {
     <label className="flex items-center justify-center gap-2 text-xs leading-normal">
       <input type="checkbox" name="privacy" required />
       <span>
-        I agree to the <a href="#footer">privacy policy</a>
+        I agree to the{" "}
+        {/* A new tab, so visitors don't lose what they've typed in the form. */}
+        <a href="/privacy" target="_blank">
+          privacy policy
+        </a>
       </span>
     </label>
   );

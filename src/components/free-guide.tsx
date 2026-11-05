@@ -85,7 +85,10 @@ export function FreeGuide() {
             <p className="max-w-[34em] text-[12px] leading-[1.7]">
               You&apos;ll get our Kyoto spots and itinerary, plus emails about our spring 2027 call times (first
               announcement Nov 25). Unsubscribe anytime. For more details, review our{" "}
-              <a href="#footer">Privacy Policy</a>.
+              <a href="/privacy" target="_blank">
+                Privacy Policy
+              </a>
+              .
             </p>
             <PrivacyConsent />
             <button
