@@ -33,8 +33,8 @@ export default function TermsPage() {
             </>,
             <>
               <b>Tour Bookings:</b> If you book a private tour or planning service with us, your reservation,
-              payment, cancellation, and refund rights are governed by our dedicated Booking Terms & Cancellation
-              Policy. Where any conflict exists between these Terms of Use and the Booking Terms regarding a tour
+              payment, cancellation, and refund rights are governed by our dedicated{" "}
+              <Link href="/cancellation">Booking Terms & Cancellation Policy</Link>. Where any conflict exists between these Terms of Use and the Booking Terms regarding a tour
               purchase, the Booking Terms take priority.
             </>,
           ]}

@@ -2,8 +2,7 @@ import Link from "next/link";
 
 const footerLinks: { label: string; href?: string }[] = [
   { label: "Terms of use", href: "/terms" },
-  // Pages for these don't exist yet.
-  { label: "Cancellation policy" },
+  { label: "Cancellation policy", href: "/cancellation" },
   { label: "Commercial transactions notice", href: "/commercial-transactions" },
   { label: "Privacy policy", href: "/privacy" },
   { label: "Instagram", href: "https://www.instagram.com/toiro.journeys/" },

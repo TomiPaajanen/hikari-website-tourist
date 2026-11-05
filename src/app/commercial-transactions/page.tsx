@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { LegalList, LegalPage, contactEmail } from "@/components/legal";
 
@@ -51,7 +52,12 @@ const items: { label: string; value: ReactNode }[] = [
   { label: "Availability", value: "A limited number of private tours are accepted per season." },
   {
     label: "Cancellation & Refund Policy",
-    value: "Governed by our Cancellation & Change Policy. Please review our cancellation terms prior to booking.",
+    value: (
+      <>
+        Governed by our <Link href="/cancellation">Cancellation & Change Policy</Link>. Please review our
+        cancellation terms prior to booking.
+      </>
+    ),
   },
   {
     label: "System Requirements",
