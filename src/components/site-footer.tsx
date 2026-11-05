@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const footerLinks: { label: string; href?: string }[] = [
+  { label: "Terms of use", href: "/terms" },
   // Pages for these don't exist yet.
-  { label: "Terms of use" },
   { label: "Cancellation policy" },
   { label: "Commercial transactions notice" },
   { label: "Privacy policy" },
@@ -20,7 +22,11 @@ export function SiteFooter() {
       <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs">
         {footerLinks.map(({ label, href }) => (
           <li key={label} className="underline">
-            {href ? (
+            {href?.startsWith("/") ? (
+              <Link href={href} className="text-paper hover:text-white">
+                {label}
+              </Link>
+            ) : href ? (
               <a href={href} target="_blank" rel="noopener noreferrer" className="text-paper hover:text-white">
                 {label}
               </a>

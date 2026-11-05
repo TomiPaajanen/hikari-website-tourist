@@ -12,10 +12,10 @@ const copy = {
       "Tell us what you're curious about, and we'll introduce you to the people behind each place: artisans, family-run businesses, and the communities around them.",
     heroCta: "Our story",
     menu: [
-      { label: "Itineraries", href: "#itineraries" },
-      { label: "About", href: "#about" },
-      { label: "Travel guide", href: "#guide" },
-      { label: "For travel agents", href: "#agents" },
+      { label: "Itineraries", href: "/#itineraries" },
+      { label: "About", href: "/#about" },
+      { label: "Travel guide", href: "/#guide" },
+      { label: "For travel agents", href: "/#agents" },
     ],
   },
   ja: {
@@ -24,10 +24,10 @@ const copy = {
       "興味を聞かせてください。その道に生きる人に、ご紹介します。同じ場所でも、会う人によって旅は変わります。あなたの興味から旅を組み、その道に生きる人へお引き合わせします。",
     heroCta: "私たちについて",
     menu: [
-      { label: "旅程を見る", href: "#itineraries" },
-      { label: "About", href: "#about" },
-      { label: "トラベルガイド", href: "#guide" },
-      { label: "旅行会社・企業様", href: "#agents" },
+      { label: "旅程を見る", href: "/#itineraries" },
+      { label: "About", href: "/#about" },
+      { label: "トラベルガイド", href: "/#guide" },
+      { label: "旅行会社・企業様", href: "/#agents" },
     ],
   },
 };
