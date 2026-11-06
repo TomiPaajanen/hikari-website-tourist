@@ -9,7 +9,7 @@ export function SiteHeader() {
   return (
     <header className="flex flex-wrap items-center justify-center gap-x-7 gap-y-4 border-b border-sand px-4 py-[22px] md:px-14">
       <Link href="/" className="font-serif text-[21px] font-bold tracking-[0.1em] text-ink no-underline">
-        Toiro Journeys
+        TOIRO Journeys
       </Link>
       <nav lang={lang} className="flex flex-wrap items-center justify-center gap-[22px]">
         {t.menu.map((item) => (

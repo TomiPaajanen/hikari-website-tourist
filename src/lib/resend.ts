@@ -1,5 +1,5 @@
 // The sender's domain must be verified in the Resend dashboard.
-const FROM = "Toiro Journeys website <website@toirojourneys.com>";
+const FROM = "TOIRO Journeys website <website@toirojourneys.com>";
 
 export async function sendEmail({
   to,
