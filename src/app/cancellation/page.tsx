@@ -162,6 +162,27 @@ export default function CancellationPage() {
         </p>
       </LegalSection>
 
+      <LegalSection title="7. Discovery Call">
+        <LegalList
+          items={[
+            <>
+              <b>Fee:</b> The discovery call costs US$5, paid before the call.
+            </>,
+            <>
+              <b>Rescheduling:</b> You may reschedule free of charge up to 24 hours before the call. No refund is given
+              for no-shows or cancellations made within 24 hours of the call.
+            </>,
+            <>
+              <b>Cancellation by Us:</b> If we cancel the call, you will receive a full refund.
+            </>,
+            <>
+              <b>Credit Toward Your Tour:</b> If you book a private tour with us, the US$5 is deducted from the tour
+              price.
+            </>,
+          ]}
+        />
+      </LegalSection>
+
       <LegalSection title="Contact Us">
         <p>For cancellation requests, date modifications, or questions regarding these terms, please contact:</p>
         <p>

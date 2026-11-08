@@ -6,6 +6,7 @@ import { FreeGuide } from "@/components/free-guide";
 import { Hero } from "@/components/hero";
 import { LanguageProvider } from "@/components/language";
 import { PlanTrip } from "@/components/plan-trip";
+import { Services } from "@/components/services";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -21,6 +22,8 @@ export default function Home() {
         <SiteHeader />
         <main>
           <Hero />
+          <Services />
+          <hr className="border-sand" />
           <Experiences />
           <hr className="border-sand" />
           <AboutUs />
