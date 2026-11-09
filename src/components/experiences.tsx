@@ -7,12 +7,6 @@ import { SIGNUP_URL } from "@/lib/links";
 // Bubble centres sit on a circle whose radius is this percentage of the diagram width.
 const RING_RADIUS = 34.29;
 
-type ItineraryStop = {
-  name: string;
-  minutes: number;
-  description: string;
-};
-
 type ItineraryExample = {
   title: string;
   theme: string;
@@ -21,8 +15,7 @@ type ItineraryExample = {
   duration: string;
   route: string;
   intro: string;
-  stops: ItineraryStop[];
-  note: string;
+  stops: string[];
 };
 
 const itineraryExamples: ItineraryExample[] = [
@@ -39,25 +32,11 @@ const itineraryExamples: ItineraryExample[] = [
     route: "Higashiyama Station → Higashiyama Station",
     intro: "Take your time with art, crafts and a shrine garden, without rushing the exhibitions.",
     stops: [
-      {
-        name: "Kyoto City KYOCERA Museum of Art",
-        minutes: 120,
-        description:
-          "Enjoy the art and architecture, or try the nearby Hosomi Museum or National Museum of Modern Art, Kyoto.",
-      },
-      { name: "Lunch in Okazaki", minutes: 60, description: "Take a proper break between exhibitions." },
-      {
-        name: "Kyoto Museum of Crafts and Design",
-        minutes: 75,
-        description: "Explore craft materials and techniques. Check dates for demonstrations and workshops.",
-      },
-      {
-        name: "Heian Jingu Shrine & gardens",
-        minutes: 75,
-        description: "Enjoy the seasonal scenery as you walk through the gardens.",
-      },
+      "Kyoto City KYOCERA Museum of Art",
+      "Lunch in Okazaki",
+      "Kyoto Museum of Crafts and Design",
+      "Heian Jingu Shrine & gardens",
     ],
-    note: "Allow about 5–15 minutes on foot between venues. This full-day plan includes a 45-minute cafe break, travel and spare time. Adjust the order for closing days and last admission.",
   },
   {
     title: "02 | Kyoto Imperial Palace, Demachiyanagi & Shimogamo",
@@ -73,28 +52,11 @@ const itineraryExamples: ItineraryExample[] = [
     intro:
       "Walk through the Imperial Palace and east of Gyoen, then continue to Shimogamo in the afternoon.",
     stops: [
-      {
-        name: "Kyoto Imperial Palace & Kyoto Gyoen",
-        minutes: 115,
-        description: "After visiting the palace, enjoy Gyoen's greenery as you head east.",
-      },
-      {
-        name: "Nashinoki Shrine & Rozan-ji",
-        minutes: 60,
-        description: "Time for a shrine visit and a garden. Choose just one if you prefer less walking.",
-      },
-      {
-        name: "Lunch east of the Imperial Palace",
-        minutes: 60,
-        description: "Head towards Demachi after lunch. Stop at a cafe if time allows.",
-      },
-      {
-        name: "Shimogamo Shrine, Tadasu-no-Mori & Kamo Delta",
-        minutes: 105,
-        description: "Finish with 75 minutes visiting the shrine and forest, then 30 minutes by the river.",
-      },
+      "Kyoto Imperial Palace & Kyoto Gyoen",
+      "Nashinoki Shrine & Rozan-ji",
+      "Lunch east of the Imperial Palace",
+      "Shimogamo Shrine, Tadasu-no-Mori & Kamo Delta",
     ],
-    note: "This plan allows about 50–80 minutes for walking and short breaks. The palace normally closes on Mondays (or the following day if Monday is a holiday). The palace and Gyoen have different access arrangements.",
   },
 ];
 
@@ -169,22 +131,14 @@ function ItineraryCard({ example }: { example: ItineraryExample }) {
 
         <ol className="mt-1 flex w-full flex-col gap-4 border-t border-sand pt-5 text-left">
           {example.stops.map((stop, index) => (
-            <li key={stop.name} className="flex gap-3.5">
+            <li key={stop} className="flex items-baseline gap-3.5">
               <span className="font-serif text-[22px] leading-none text-accent">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <div className="flex flex-col gap-1">
-                <h4 className="font-serif text-[17px] leading-tight font-semibold">{stop.name}</h4>
-                <p className="text-[11px] text-accent">{stop.minutes} min</p>
-                <p className="text-[12.5px] leading-[1.7]">{stop.description}</p>
-              </div>
+              <h4 className="font-serif text-[17px] leading-tight font-semibold">{stop}</h4>
             </li>
           ))}
         </ol>
-
-        <p className="mt-1 w-full rounded-[3px] bg-sand/50 px-4 py-3 text-left text-[11.5px] leading-[1.7]">
-          {example.note}
-        </p>
       </div>
     </article>
   );
