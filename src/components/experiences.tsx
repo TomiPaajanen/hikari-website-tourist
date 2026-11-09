@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { getInterest, interests, type Interest, type InterestId } from "@/lib/interests";
 import { ButtonLink, Eyebrow, SectionHeading, sectionClass } from "@/components/ui";
-import { SIGNUP_URL } from "@/lib/links";
+import { PLAN_TRIP_URL } from "@/lib/links";
 
 // Bubble centres sit on a circle whose radius is this percentage of the diagram width.
 const RING_RADIUS = 34.29;
@@ -168,7 +168,7 @@ export function Experiences() {
         <p className="font-serif text-xl italic">
           Every itinerary is an example. We build yours around your interest.
         </p>
-        <ButtonLink href={SIGNUP_URL} className="px-8 py-[15px] text-sm">
+        <ButtonLink href={PLAN_TRIP_URL} className="px-8 py-[15px] text-sm">
           Plan your trip with us
         </ButtonLink>
       </div>

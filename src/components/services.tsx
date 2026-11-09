@@ -1,5 +1,5 @@
 import { ButtonLink, SectionHeading, sectionClass } from "@/components/ui";
-import { SIGNUP_URL } from "@/lib/links";
+import { PLAN_TRIP_URL } from "@/lib/links";
 
 type Service = {
   title: string;
@@ -11,23 +11,23 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Research & itinerary",
+    title: "Custom itinerary planning",
     price: "from ¥6,000",
     unit: "per experience",
     description:
       "Tell us one thing you want to do, such as a Japanese painting workshop. We find the right place, and build your plan around it.",
   },
   {
-    title: "Booking support",
+    title: "Recommendations and booking assistance",
     price: "from ¥3,000",
     unit: "per experience",
     description: "We make the reservation for you in Japanese.",
   },
   {
-    title: "Private tours",
+    title: "Private guided tour",
     price: "Price on request",
     description:
-      "Private custom tours from half a day to several weeks, shaped around your wishes, with a guide by your side throughout.",
+      "Half-day, full-day, or multi-day private custom tours, shaped around your wishes, with a guide by your side throughout.",
     featured: true,
   },
 ];
@@ -53,7 +53,7 @@ export function Services() {
         ))}
       </ul>
 
-      <ButtonLink href={SIGNUP_URL} className="px-8 py-[15px] text-sm">
+      <ButtonLink href={PLAN_TRIP_URL} className="px-8 py-[15px] text-sm">
         Plan your trip with us
       </ButtonLink>
     </section>

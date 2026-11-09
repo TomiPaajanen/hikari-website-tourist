@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Eyebrow, SectionHeading, sectionClass } from "@/components/ui";
+import { Reviews } from "@/components/reviews";
+import { SectionHeading, sectionClass } from "@/components/ui";
 
 const founders = [
   {
@@ -16,18 +17,6 @@ const founders = [
   },
 ];
 
-const reviews = [
-  {
-    quote:
-      "One of the things I remember about our time in Osaka was how you wanted us to experience the city from a local’s perspective. Rather than just taking us to the usual tourist spots, you wanted to share places and experiences that felt more authentic and local. It felt like exploring Osaka with friends who were excited to share their city with us. That personal touch made the experience so much more memorable.",
-    author: "A., United States",
-  },
-  {
-    quote:
-      "Mitsuki was a great tour guide for my stay in Osaka. She walked around town with us and helped us to have a great local experience! We hit the local bars, did some karaoke and had some excellent takoyaki!",
-    author: "Guest from the United States",
-  },
-];
 
 export function AboutUs() {
   return (
@@ -68,19 +57,7 @@ export function AboutUs() {
         everyone.
       </blockquote>
 
-      <Eyebrow className="mt-12 mb-4">What our guests say</Eyebrow>
-      <ul className="mx-auto grid max-w-[1000px] grid-cols-1 gap-4 text-left md:grid-cols-2">
-        {reviews.map((review) => (
-          <li key={review.author} className="rounded-[3px] border border-sand px-[18px] py-6">
-            <figure className="flex h-full flex-col gap-4">
-              <blockquote className="text-[13px] leading-[1.85]">“{review.quote}”</blockquote>
-              <figcaption className="mt-auto text-xs tracking-[0.06em] text-accent uppercase">
-                {review.author}
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
+      <Reviews />
     </section>
   );
 }

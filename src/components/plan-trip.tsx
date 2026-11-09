@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ButtonLink, sectionClass } from "@/components/ui";
-import { SIGNUP_URL } from "@/lib/links";
+import { PLAN_TRIP_URL } from "@/lib/links";
 
 const benefits = [
   "A chance for us to hear what you are looking for",
@@ -58,7 +58,7 @@ export function PlanTrip() {
           </div>
         </div>
 
-        <ButtonLink href={SIGNUP_URL} className="mt-9 px-9 py-[17px] text-[15px] font-medium">
+        <ButtonLink href={PLAN_TRIP_URL} className="mt-9 px-9 py-[17px] text-[15px] font-medium">
           Plan your trip with us
         </ButtonLink>
       </div>
