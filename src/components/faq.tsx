@@ -1,10 +1,20 @@
+import type { ReactNode } from "react";
 import { SectionHeading, sectionClass } from "@/components/ui";
+import { EARLY_ACCESS_URL } from "@/lib/links";
 
-const questions = [
+const questions: { question: string; answer: ReactNode }[] = [
+  {
+    question: "Do I need to know my exact travel dates?",
+    answer: "No. A rough idea of your travel timing is enough to start the conversation.",
+  },
   {
     question: "What is the early access list?",
-    answer:
-      "It is a way to hear from us first and get first pick of available discovery call times for spring 2027.",
+    answer: (
+      <>
+        It is the way to be the first to plan your trip with us.{" "}
+        <a href={EARLY_ACCESS_URL}>Join the early access list</a>.
+      </>
+    ),
   },
   {
     question: "What happens on a discovery call?",
@@ -12,15 +22,11 @@ const questions = [
       "We will spend 30 minutes online asking what you are curious about and sharing what we could do together.",
   },
   {
-    question: "Do I need to know my exact travel dates?",
-    answer: "No. A rough idea of your travel timing is enough to start the conversation.",
-  },
-  {
-    question: "Is joining the list a commitment to book?",
+    question: "Is joining the early access list a commitment to book?",
     answer: "No. Joining the list and having a discovery call do not commit you to booking a trip.",
   },
   {
-    question: "When should I join?",
+    question: "When should I join the early access list?",
     answer: "Join by November 24 to get first pick of discovery call times for spring 2027.",
   },
   {
