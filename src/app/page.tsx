@@ -1,6 +1,7 @@
 import { AboutUs } from "@/components/about-us";
 import { ComingSoon } from "@/components/coming-soon";
 import { Experiences } from "@/components/experiences";
+import { Faq } from "@/components/faq";
 import { ForAgents } from "@/components/for-agents";
 import { FreeGuide } from "@/components/free-guide";
 import { Hero } from "@/components/hero";
@@ -32,6 +33,8 @@ export default function Home() {
           <FreeGuide />
           <hr className="border-sand" />
           <ForAgents />
+          <hr className="border-sand" />
+          <Faq />
         </main>
         <SiteFooter />
       </div>
